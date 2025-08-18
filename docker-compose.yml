@@ -1,0 +1,78 @@
+version: '3.8'
+
+services:
+  # PostgreSQL 資料庫服務
+  db:
+    image: postgres:15-alpine
+    container_name: hui_embroidery_db
+    restart: unless-stopped
+    environment:
+      POSTGRES_DB: hui_embroidery
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: postgres123
+      POSTGRES_HOST_AUTH_METHOD: trust
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+    ports:
+      - "5432:5432"
+    networks:
+      - hui_embroidery_network
+
+  # Django 後端服務
+  backend:
+    build:
+      context: ./backend
+      dockerfile: Dockerfile
+    container_name: hui_embroidery_backend
+    restart: unless-stopped
+    environment:
+      - DEBUG=1
+      - DB_NAME=hui_embroidery
+      - DB_USER=postgres
+      - DB_PASSWORD=postgres123
+      - DB_HOST=db
+      - DB_PORT=5432
+      - DJANGO_SECRET_KEY=your-secret-key-change-in-production
+    volumes:
+      - ./backend:/app
+      - backend_media:/app/media
+    ports:
+      - "8000:8000"
+    depends_on:
+      - db
+    networks:
+      - hui_embroidery_network
+    command: >
+      sh -c "python manage.py migrate &&
+             python manage.py runserver 0.0.0.0:8000"
+
+  # Next.js 前端服務（開發模式）
+  frontend:
+    build:
+      context: ./frontend
+      dockerfile: Dockerfile.dev
+    container_name: hui_embroidery_frontend
+    restart: unless-stopped
+    environment:
+      - NODE_ENV=development
+      - NEXT_PUBLIC_API_URL=http://localhost:8000
+    volumes:
+      - ./frontend:/app
+      - /app/node_modules
+      - /app/.next
+    ports:
+      - "3000:3000"
+    depends_on:
+      - backend
+    networks:
+      - hui_embroidery_network
+
+# 定義持久化儲存卷
+volumes:
+  postgres_data:
+  backend_media:
+
+# 定義網路
+networks:
+  hui_embroidery_network:
+    driver: bridge
