@@ -1,0 +1,74 @@
+{
+  "HomePage": {
+    "title": "歡迎來到慧繡雅集",
+    "subtitle": "傳承中華刺繡藝術之美",
+    "description": "在這裡，您可以欣賞到精美的刺繡作品，了解中華傳統工藝的魅力。",
+    "featuredWorks": "精選作品",
+    "latestNews": "最新消息",
+    "about": "關於我們",
+    "contact": "聯絡我們",
+    "gallery": "作品集",
+    "blog": "部落格"
+  },
+  "Navigation": {
+    "home": "首頁",
+    "gallery": "作品集",
+    "about": "關於我們",
+    "blog": "部落格",
+    "contact": "聯絡我們",
+    "language": "語言"
+  },
+  "Footer": {
+    "copyright": "版權所有",
+    "allRightsReserved": "保留所有權利",
+    "quickLinks": "快速連結",
+    "contact": "聯絡資訊",
+    "followUs": "關注我們"
+  },
+  "Home": {
+    "hero": {
+      "title": "慧繡雅集",
+      "subtitle": "傳承中華刺繡藝術之美",
+      "description": "在這裡，您可以欣賞到精美的刺繡作品，了解中華傳統工藝的魅力，感受千年文化的深厚底蘊。",
+      "galleryButton": "精選作品",
+      "aboutButton": "關於我們"
+    },
+    "featuredArtworks": {
+      "title": "精選作品",
+      "subtitle": "展示我們最優秀的刺繡藝術作品",
+      "viewAll": "查看所有作品",
+      "loading": "載入作品中...",
+      "error": "載入作品失敗",
+      "retry": "重新載入"
+    },
+    "latestPosts": {
+      "title": "最新消息",
+      "subtitle": "了解刺繡藝術的最新動態與工藝分享",
+      "viewAll": "查看所有文章",
+      "readMore": "閱讀更多",
+      "loading": "載入文章中...",
+      "error": "載入文章失敗",
+      "retry": "重新載入"
+    },
+    "about": {
+      "title": "關於我們",
+      "subtitle": "傳統工藝的現代傳承",
+      "description": "慧繡雅集致力於傳承和發揚中華傳統刺繡工藝，結合現代美學理念，創造出具有時代特色的精美作品。我們相信，每一針每一線都承載著深厚的文化內涵。",
+      "learnMore": "了解更多",
+      "achievements": {
+        "experience": "年經驗",
+        "works": "件作品",
+        "exhibitions": "次展覽",
+        "awards": "項獲獎"
+      }
+    },
+    "contact": {
+      "title": "聯絡我們",
+      "subtitle": "歡迎與我們交流刺繡藝術",
+      "getInTouch": "立即聯絡",
+      "loading": "載入中...",
+      "error": "載入聯絡資訊失敗",
+      "retry": "重新載入"
+    }
+  }
+}

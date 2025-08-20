@@ -1,0 +1,350 @@
+@import "tailwindcss";
+@import '../../styles/design-tokens.css';
+
+/* 防止擴充功能干擾 */
+.tc-new-price,
+.tc-price-comparison,
+[class*="tc-"],
+[class*="honey-"],
+[class*="capital-one-"],
+[class*="rakuten-"],
+[class*="paypal-"],
+[class*="browser-extension"] {
+  display: none !important;
+  visibility: hidden !important;
+  opacity: 0 !important;
+  position: absolute !important;
+  top: -9999px !important;
+  left: -9999px !important;
+}
+
+/* 重置樣式以防止擴充功能覆蓋 */
+html {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Noto Sans TC", "Microsoft JhengHei", sans-serif !important;
+  color-scheme: light !important;
+  scroll-behavior: smooth; /* 平滑滾動 */
+}
+
+body {
+  font-family: inherit !important;
+  background-color: white !important;
+  color: #333 !important;
+  margin: 0 !important;
+  padding: 0 !important;
+}
+
+/* 基礎樣式 */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  line-height: 1.6;
+  color: var(--color-ink-medium);
+  background-color: var(--color-paper-white);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* 響應式圖片 */
+.responsive-image {
+  max-width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+
+/* 改善中文字體渲染 */
+[lang="zh-tw"] {
+  font-family: 
+    "Noto Sans TC",
+    "Microsoft JhengHei",
+    "PingFang TC",
+    "Hiragino Sans GB",
+    -apple-system,
+    BlinkMacSystemFont,
+    sans-serif !important;
+}
+
+[lang="en"] {
+  font-family: 
+    -apple-system,
+    BlinkMacSystemFont,
+    "Segoe UI",
+    "Roboto",
+    sans-serif !important;
+}
+
+/* 確保 Tailwind 樣式優先 */
+.bg-white {
+  background-color: white !important;
+}
+
+/* 自訂實用類別 */
+.container {
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
+@media (min-width: 640px) {
+  .container {
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .container {
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
+}
+
+/* 針對section的間距調整 */
+section {
+  scroll-margin-top: 80px; /* header高度的偏移 */
+}
+
+/* 增強中國風元素 */
+.chinese-pattern {
+  background-image: 
+    radial-gradient(circle at 20% 20%, rgba(220, 38, 38, 0.1) 0%, transparent 50%),
+    radial-gradient(circle at 80% 80%, rgba(245, 158, 11, 0.1) 0%, transparent 50%);
+}
+
+/* 文字居中優化 */
+.text-center {
+  text-align: center !important;
+}
+
+.mx-auto {
+  margin-left: auto !important;
+  margin-right: auto !important;
+}
+
+/* 響應式文字對齊 */
+@media (max-width: 768px) {
+  .hero-text {
+    text-align: center !important;
+    padding-left: 1rem !important;
+    padding-right: 1rem !important;
+  }
+}
+
+/* 動畫效果 */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fadeInUp {
+  animation: fadeInUp 0.6s ease-out forwards;
+}
+
+@keyframes slideInFromLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.animate-slideInLeft {
+  animation: slideInFromLeft 0.6s ease-out forwards;
+}
+
+@keyframes slideInFromRight {
+  from {
+    opacity: 0;
+    transform: translateX(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.animate-slideInRight {
+  animation: slideInFromRight 0.6s ease-out forwards;
+}
+
+/* 下拉選單美化 */
+.dropdown-menu {
+  background: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(220, 38, 38, 0.1);
+}
+
+/* 中國風裝飾效果增強 */
+.chinese-corner {
+  position: relative;
+}
+
+.chinese-corner::before,
+.chinese-corner::after {
+  content: '';
+  position: absolute;
+  width: 16px;
+  height: 16px;
+  border: 2px solid var(--color-gold-primary);
+  transition: all 0.3s ease;
+}
+
+.chinese-corner::before {
+  top: -2px;
+  left: -2px;
+  border-right: none;
+  border-bottom: none;
+}
+
+.chinese-corner::after {
+  bottom: -2px;
+  right: -2px;
+  border-left: none;
+  border-top: none;
+}
+
+.chinese-corner:hover::before,
+.chinese-corner:hover::after {
+  border-color: var(--color-red-primary);
+  width: 20px;
+  height: 20px;
+}
+
+/* 漸變文字效果 */
+.gradient-text {
+  background: linear-gradient(135deg, var(--color-red-primary), var(--color-red-secondary));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* 玻璃質感效果 */
+.glass-effect {
+  background: rgba(255, 255, 255, 0.25);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.18);
+}
+
+/* 懸浮卡片效果 */
+.card-hover {
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.card-hover:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+}
+
+/* 文字截斷 */
+.line-clamp-2 {
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.line-clamp-3 {
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+/* 客製化滾動條 */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--color-red-primary);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--color-red-secondary);
+}
+
+/* 載入動畫 */
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.animate-spin {
+  animation: spin 1s linear infinite;
+}
+
+/* 脈衝動畫 */
+@keyframes pulse {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: .5;
+  }
+}
+
+.animate-pulse {
+  animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
+
+/* 彈跳動畫 */
+@keyframes bounce {
+  0%, 100% {
+    transform: translateY(-25%);
+    animation-timing-function: cubic-bezier(0.8, 0, 1, 1);
+  }
+  50% {
+    transform: none;
+    animation-timing-function: cubic-bezier(0, 0, 0.2, 1);
+  }
+}
+
+.animate-bounce {
+  animation: bounce 1s infinite;
+}
+
+/* 響應式隱藏/顯示 */
+@media (max-width: 640px) {
+  .sm\:hidden {
+    display: none;
+  }
+}
+
+@media (min-width: 641px) {
+  .sm\:block {
+    display: block;
+  }
+}
+
+@media (max-width: 768px) {
+  .md\:hidden {
+    display: none;
+  }
+}
+
+@media (min-width: 769px) {
+  .md\:flex {
+    display: flex;
+  }
+  .md\:block {
+    display: block;
+  }
+}

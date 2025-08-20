@@ -1,0 +1,74 @@
+{
+  "HomePage": {
+    "title": "Welcome to Hui Embroidery",
+    "subtitle": "Preserving the Beauty of Chinese Embroidery Art",
+    "description": "Here you can admire exquisite embroidery works and understand the charm of traditional Chinese craftsmanship.",
+    "featuredWorks": "Featured Works",
+    "latestNews": "Latest News",
+    "about": "About Us",
+    "contact": "Contact",
+    "gallery": "Gallery",
+    "blog": "Blog"
+  },
+  "Navigation": {
+    "home": "Home",
+    "gallery": "Gallery",
+    "about": "About",
+    "blog": "Blog",
+    "contact": "Contact",
+    "language": "Language"
+  },
+  "Footer": {
+    "copyright": "Copyright",
+    "allRightsReserved": "All Rights Reserved",
+    "quickLinks": "Quick Links",
+    "contact": "Contact Info",
+    "followUs": "Follow Us"
+  },
+  "Home": {
+    "hero": {
+      "title": "Hui Embroidery",
+      "subtitle": "Preserving the Beauty of Chinese Embroidery Art",
+      "description": "Here you can admire exquisite embroidery works, understand the charm of traditional Chinese craftsmanship, and feel the profound heritage of millennium culture.",
+      "galleryButton": "Featured Works",
+      "aboutButton": "About Us"
+    },
+    "featuredArtworks": {
+      "title": "Featured Artworks",
+      "subtitle": "Showcase of our finest embroidery art pieces",
+      "viewAll": "View All Artworks",
+      "loading": "Loading artworks...",
+      "error": "Failed to load artworks",
+      "retry": "Retry"
+    },
+    "latestPosts": {
+      "title": "Latest News",
+      "subtitle": "Stay updated with embroidery art news and craft sharing",
+      "viewAll": "View All Posts",
+      "readMore": "Read More",
+      "loading": "Loading posts...",
+      "error": "Failed to load posts",
+      "retry": "Retry"
+    },
+    "about": {
+      "title": "About Us",
+      "subtitle": "Modern Heritage of Traditional Craftsmanship",
+      "description": "Hui Embroidery is dedicated to preserving and promoting traditional Chinese embroidery craftsmanship, combining modern aesthetic concepts to create exquisite works with contemporary characteristics. We believe that every stitch carries profound cultural connotations.",
+      "learnMore": "Learn More",
+      "achievements": {
+        "experience": "Years Experience",
+        "works": "Artworks",
+        "exhibitions": "Exhibitions",
+        "awards": "Awards"
+      }
+    },
+    "contact": {
+      "title": "Contact Us",
+      "subtitle": "We welcome exchanges about embroidery art",
+      "getInTouch": "Get In Touch",
+      "loading": "Loading...",
+      "error": "Failed to load contact info",
+      "retry": "Retry"
+    }
+  }
+}
