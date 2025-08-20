@@ -1,8 +1,8 @@
 {
   "HomePage": {
     "title": "歡迎來到慧繡雅集",
-    "subtitle": "傳承中華刺繡藝術之美",
-    "description": "在這裡，您可以欣賞到精美的刺繡作品，了解中華傳統工藝的魅力。",
+    "subtitle": "湘繡高級訂製的典範",
+    "description": "在這裡，您可以欣賞到精美的湘繡作品，了解鬅毛針法的精湛技藝。",
     "featuredWorks": "精選作品",
     "latestNews": "最新消息",
     "about": "關於我們",
@@ -28,14 +28,14 @@
   "Home": {
     "hero": {
       "title": "慧繡雅集",
-      "subtitle": "傳承中華刺繡藝術之美",
-      "description": "在這裡，您可以欣賞到精美的刺繡作品，了解中華傳統工藝的魅力，感受千年文化的深厚底蘊。",
+      "subtitle": "湘繡高級訂製的典範",
+      "description": "我們專注於湘繡藝術的傳承與創新，由國際刺繡大師毛慧創立。作為鬅毛針法第三代傳承人，將三十餘年的精湛技藝與現代美學完美結合，為您呈現獨一無二的高級訂製刺繡藝術。",
       "galleryButton": "精選作品",
       "aboutButton": "關於我們"
     },
     "featuredArtworks": {
       "title": "精選作品",
-      "subtitle": "展示我們最優秀的刺繡藝術作品",
+      "subtitle": "展示湘繡藝術的精湛技藝與美學創新",
       "viewAll": "查看所有作品",
       "loading": "載入作品中...",
       "error": "載入作品失敗",
@@ -43,7 +43,7 @@
     },
     "latestPosts": {
       "title": "最新消息",
-      "subtitle": "了解刺繡藝術的最新動態與工藝分享",
+      "subtitle": "了解湘繡藝術的最新動態與技法分享",
       "viewAll": "查看所有文章",
       "readMore": "閱讀更多",
       "loading": "載入文章中...",
@@ -52,19 +52,19 @@
     },
     "about": {
       "title": "關於我們",
-      "subtitle": "傳統工藝的現代傳承",
-      "description": "慧繡雅集致力於傳承和發揚中華傳統刺繡工藝，結合現代美學理念，創造出具有時代特色的精美作品。我們相信，每一針每一線都承載著深厚的文化內涵。",
+      "subtitle": "湘繡世家的傳承與創新",
+      "description": "慧繡雅集由國際刺繡大師毛慧創立，專注於湘繡藝術的高級訂製。我們秉承傳統鬅毛針法，結合現代美學理念，每一件作品都是藝術與技藝的完美結合。",
       "learnMore": "了解更多",
       "achievements": {
-        "experience": "年經驗",
-        "works": "件作品",
-        "exhibitions": "次展覽",
-        "awards": "項獲獎"
+        "experience": "年湘繡經驗",
+        "works": "件精品創作",
+        "exhibitions": "次國際展覽",
+        "awards": "項國際大獎"
       }
     },
     "contact": {
       "title": "聯絡我們",
-      "subtitle": "歡迎與我們交流刺繡藝術",
+      "subtitle": "歡迎與我們交流湘繡藝術與高級訂製",
       "getInTouch": "立即聯絡",
       "loading": "載入中...",
       "error": "載入聯絡資訊失敗",

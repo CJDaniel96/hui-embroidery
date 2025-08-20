@@ -1,8 +1,8 @@
 {
   "HomePage": {
     "title": "Welcome to Hui Embroidery",
-    "subtitle": "Preserving the Beauty of Chinese Embroidery Art",
-    "description": "Here you can admire exquisite embroidery works and understand the charm of traditional Chinese craftsmanship.",
+    "subtitle": "Excellence in Xiang Embroidery Haute Couture",
+    "description": "Here you can admire exquisite Xiang embroidery works and understand the exquisite craftsmanship of the Maomao technique.",
     "featuredWorks": "Featured Works",
     "latestNews": "Latest News",
     "about": "About Us",
@@ -28,14 +28,14 @@
   "Home": {
     "hero": {
       "title": "Hui Embroidery",
-      "subtitle": "Preserving the Beauty of Chinese Embroidery Art",
-      "description": "Here you can admire exquisite embroidery works, understand the charm of traditional Chinese craftsmanship, and feel the profound heritage of millennium culture.",
+      "subtitle": "Excellence in Xiang Embroidery Haute Couture",
+      "description": "We focus on the inheritance and innovation of Xiang embroidery art, founded by international embroidery master Mao Hui. As the third-generation inheritor of the Maomao technique, we perfectly combine over thirty years of exquisite craftsmanship with modern aesthetics to present unique haute couture embroidery art.",
       "galleryButton": "Featured Works",
       "aboutButton": "About Us"
     },
     "featuredArtworks": {
       "title": "Featured Artworks",
-      "subtitle": "Showcase of our finest embroidery art pieces",
+      "subtitle": "Showcasing the exquisite craftsmanship and aesthetic innovation of Xiang embroidery",
       "viewAll": "View All Artworks",
       "loading": "Loading artworks...",
       "error": "Failed to load artworks",
@@ -43,7 +43,7 @@
     },
     "latestPosts": {
       "title": "Latest News",
-      "subtitle": "Stay updated with embroidery art news and craft sharing",
+      "subtitle": "Stay updated with Xiang embroidery art news and technique sharing",
       "viewAll": "View All Posts",
       "readMore": "Read More",
       "loading": "Loading posts...",
@@ -52,19 +52,19 @@
     },
     "about": {
       "title": "About Us",
-      "subtitle": "Modern Heritage of Traditional Craftsmanship",
-      "description": "Hui Embroidery is dedicated to preserving and promoting traditional Chinese embroidery craftsmanship, combining modern aesthetic concepts to create exquisite works with contemporary characteristics. We believe that every stitch carries profound cultural connotations.",
+      "subtitle": "Heritage and Innovation of Xiang Embroidery Family",
+      "description": "Hui Embroidery was founded by international embroidery master Mao Hui, focusing on haute couture Xiang embroidery art. We uphold the traditional Maomao technique while combining modern aesthetic concepts, with every piece being a perfect combination of art and craftsmanship.",
       "learnMore": "Learn More",
       "achievements": {
-        "experience": "Years Experience",
-        "works": "Artworks",
-        "exhibitions": "Exhibitions",
-        "awards": "Awards"
+        "experience": "Years Xiang Embroidery",
+        "works": "Masterpiece Creations",
+        "exhibitions": "International Exhibitions",
+        "awards": "International Awards"
       }
     },
     "contact": {
       "title": "Contact Us",
-      "subtitle": "We welcome exchanges about embroidery art",
+      "subtitle": "We welcome exchanges about Xiang embroidery art and haute couture",
       "getInTouch": "Get In Touch",
       "loading": "Loading...",
       "error": "Failed to load contact info",

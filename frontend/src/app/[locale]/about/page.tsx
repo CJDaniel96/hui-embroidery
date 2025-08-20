@@ -36,127 +36,138 @@ export default async function AboutPage({
     followUs: t('Footer.followUs') || '關注我們',
   };
 
-  // 模擬數據 - 在實際應用中這些數據會從 API 獲取
+  // 更新的發展歷程 - 真實的毛慧大師經歷
   const milestones = locale === 'zh-tw' ? [
     {
-      year: "1985",
-      title: "藝術之路啟程",
-      description: "師從國家級工藝美術大師，開始系統學習蘇繡技藝，奠定了深厚的傳統工藝基礎。"
+      year: "1987",
+      title: "初露鋒芒",
+      description: "《唐人打馬球》《編鐘樂舞》獲全國工藝美術百花獎金獎，正式踏入湘繡藝術殿堂。"
     },
     {
-      year: "1995",
-      title: "技藝精進",
-      description: "掌握多種刺繡針法，作品開始在地方工藝展覽中嶄露頭角，獲得業內專家認可。"
+      year: "1989",
+      title: "技藝精進", 
+      description: "多畫面全異繡《李清照》獲世博會金獎，展現湘繡鬅毛針法的獨特魅力。"
     },
     {
-      year: "2005",
-      title: "創新突破",
-      description: "將傳統刺繡與現代設計理念結合，創造出獨特的藝術風格，作品開始走向國際舞台。"
+      year: "1990-2003",
+      title: "國際認可",
+      description: "《和服腰帶》獲輕工部百花獎金獎，作品開始在台灣及國際展覽中屢獲殊榮。"
     },
     {
-      year: "2015",
-      title: "慧繡雅集成立",
-      description: "正式成立工作室，致力於傳承和發揚中華刺繡藝術，培養新一代工藝傳承人。"
+      year: "2008-2017",
+      title: "大師地位確立",
+      description: "《虎嘯》獲台灣精品大賽銀獎，《荷塘月色》等作品持續在國際舞台發光發熱。"
     },
     {
       year: "2024",
-      title: "數位化傳承",
-      description: "結合現代科技，建立線上平台，讓更多人能夠了解和學習這門古老而美麗的藝術。"
+      title: "慧繡雅集成立",
+      description: "成立高級訂製工作室，將三十餘年的湘繡技藝傳承與現代美學完美結合。"
     }
   ] : [
     {
-      year: "1985",
-      title: "Artistic Journey Begins",
-      description: "Studied under national craft master, began systematic learning of Suzhou embroidery techniques, establishing a solid foundation in traditional craftsmanship."
+      year: "1987",
+      title: "First Recognition",
+      description: "Won National Arts & Crafts Hundred Flowers Award Gold for 'Tang Dynasty Polo' and 'Chime Bell Dance', officially entering the hall of Xiang embroidery art."
     },
     {
-      year: "1995",
-      title: "Skill Enhancement",
-      description: "Mastered various embroidery stitching techniques, works began to stand out in local craft exhibitions, gaining recognition from industry experts."
+      year: "1989",
+      title: "Skill Advancement",
+      description: "Multi-scene different embroidery 'Li Qingzhao' won World Expo Gold Award, showcasing the unique charm of Xiang embroidery Maomao technique."
     },
     {
-      year: "2005",
-      title: "Innovation Breakthrough",
-      description: "Combined traditional embroidery with modern design concepts, creating a unique artistic style, works began to reach international stages."
+      year: "1990-2003",
+      title: "International Recognition",
+      description: "'Kimono Obi' won Ministry of Light Industry Hundred Flowers Award Gold, works began winning honors in Taiwan and international exhibitions."
     },
     {
-      year: "2015",
-      title: "Hui Embroidery Established",
-      description: "Officially established the studio, dedicated to preserving and promoting Chinese embroidery art, cultivating new generation artisans."
+      year: "2008-2017",
+      title: "Master Status Established",
+      description: "'Tiger Roar' won Taiwan Boutique Competition Silver Award, 'Lotus Pond Moonlight' and other works continued to shine on international stages."
     },
     {
       year: "2024",
-      title: "Digital Heritage",
-      description: "Combined with modern technology, established online platform, allowing more people to understand and learn this ancient and beautiful art."
+      title: "Hui Embroidery Established",
+      description: "Established haute couture studio, perfectly combining over thirty years of Xiang embroidery techniques with modern aesthetics."
     }
   ];
 
+  // 更新的大師資訊 - 毛慧大師
   const master = locale === 'zh-tw' ? {
-    name: "陳慧雅",
-    title: "國家級工藝美術大師",
-    description: "陳慧雅大師從事刺繡藝術三十餘年，師承蘇繡世家，精通多種傳統針法。她的作品融合了古典美學與現代創意，多次在國內外展覽中獲獎，被譽為當代刺繡藝術的傑出代表。",
-    specialties: ["蘇繡", "湘繡", "現代創意刺繡", "文物修復"],
+    name: "毛慧",
+    title: "國際刺繡工藝大師",
+    description: "毛慧大師來自湘繡世家，師承亞太大師、中國工藝美術大師周金秀，擁有超過30年的精湛技藝。她是湘繡獨特針法「鬅毛針」的第三代傳承人，作品屢獲國際獎項，深受全球收藏家和藝術愛好者的讚譽。",
+    specialties: ["湘繡", "鬅毛針法", "雙面全異繡", "高級訂製"],
     achievements: [
-      "獲得國家級工藝美術大師稱號",
-      "作品被國家博物館永久收藏",
-      "多次獲得國際工藝美術大獎",
-      "出版刺繡技法專著三部",
-      "培養工藝傳承人超過百名"
+      "湘繡鬅毛針法第三代傳承人",
+      "作品《布什全家福》贈予美國總統布什夫婦",
+      "多次獲得國際工藝美術大獎金獎",
+      "專精人物、動物、花鳥、山水等題材",
+      "創新技法大幅提升作品藝術性與效率"
     ],
-    philosophy: "針針線線皆有情，一絲一縷總關心。刺繡不僅是技藝，更是文化的傳承，是心靈的表達。"
+    philosophy: "針線之間見真情，絲絲入扣顯匠心。湘繡不僅是技藝的傳承，更是文化的延續與創新的表達。"
   } : {
-    name: "Chen Huiya",
-    title: "National Master of Arts & Crafts",
-    description: "Master Chen Huiya has been engaged in embroidery art for over thirty years, inheriting from a Suzhou embroidery family and mastering various traditional stitching techniques. Her works blend classical aesthetics with modern creativity, winning awards in domestic and international exhibitions, and is acclaimed as an outstanding representative of contemporary embroidery art.",
-    specialties: ["Suzhou Embroidery", "Xiang Embroidery", "Modern Creative Embroidery", "Cultural Relic Restoration"],
+    name: "Mao Hui",
+    title: "International Master of Embroidery Crafts",
+    description: "Master Mao Hui comes from a Xiang embroidery family, trained under Asia-Pacific Master and Chinese Arts & Crafts Master Zhou Jinxiu, with over 30 years of exquisite skills. She is the third-generation inheritor of the unique Xiang embroidery 'Maomao' technique, with works winning international awards and deeply appreciated by collectors and art lovers worldwide.",
+    specialties: ["Xiang Embroidery", "Maomao Technique", "Double-sided Different Embroidery", "Haute Couture"],
     achievements: [
-      "Awarded National Master of Arts & Crafts title",
-      "Works permanently collected by National Museum",
-      "Multiple international craft art awards",
-      "Published three embroidery technique monographs",
-      "Trained over 100 craft inheritors"
+      "Third-generation inheritor of Xiang embroidery Maomao technique",
+      "Created 'Bush Family Portrait' as gift to President Bush and his wife",
+      "Multiple international craft art gold awards",
+      "Specializes in figures, animals, flowers, birds, and landscapes",
+      "Innovative techniques greatly enhance artistic quality and efficiency"
     ],
-    philosophy: "Every stitch and thread carries emotion, every silk and strand matters. Embroidery is not just technique, but cultural heritage and spiritual expression."
+    philosophy: "True emotion flows between needle and thread, craftsmanship shows in every detail. Xiang embroidery is not just technique inheritance, but cultural continuation and innovative expression."
   };
 
   const stats = locale === 'zh-tw' ? [
-    { number: "30+", label: "年藝術經驗", icon: "🎨" },
-    { number: "500+", label: "件精品作品", icon: "🧵" },
-    { number: "50+", label: "次展覽經歷", icon: "🏛️" },
-    { number: "20+", label: "項國際大獎", icon: "🏆" }
+    { number: "30+", label: "年湘繡經驗", icon: "🧵" },
+    { number: "500+", label: "件精品創作", icon: "🎨" },
+    { number: "20+", label: "項國際大獎", icon: "🏆" },
+    { number: "3", label: "代鬅毛針傳承", icon: "✨" }
   ] : [
-    { number: "30+", label: "Years Experience", icon: "🎨" },
-    { number: "500+", label: "Masterpieces", icon: "🧵" },
-    { number: "50+", label: "Exhibitions", icon: "🏛️" },
-    { number: "20+", label: "International Awards", icon: "🏆" }
+    { number: "30+", label: "Years Xiang Embroidery", icon: "🧵" },
+    { number: "500+", label: "Masterpiece Creations", icon: "🎨" },
+    { number: "20+", label: "International Awards", icon: "🏆" },
+    { number: "3rd", label: "Gen Maomao Inheritor", icon: "✨" }
   ];
 
   const exhibitions = locale === 'zh-tw' ? [
-    { year: "2024", name: "絲路新韻刺繡藝術展", location: "中國美術館", type: "solo" },
-    { year: "2023", name: "東方美學國際工藝展", location: "巴黎羅浮宮", type: "group" },
-    { year: "2022", name: "傳承與創新個人作品展", location: "上海博物館", type: "solo" },
-    { year: "2021", name: "亞洲傳統工藝聯展", location: "東京國立博物館", type: "group" }
+    { year: "2017", name: "台灣工藝競賽獲獎展", location: "台灣工藝發展協會", type: "group" },
+    { year: "2016", name: "台灣工藝發展協會聯展", location: "台灣", type: "group" },
+    { year: "2015", name: "中國國際文化產業博覽會", location: "深圳", type: "group" },
+    { year: "2014", name: "中國國際文化產業博覽會", location: "深圳", type: "group" }
   ] : [
-    { year: "2024", name: "Silk Road New Rhythm Embroidery Exhibition", location: "National Art Museum of China", type: "solo" },
-    { year: "2023", name: "Oriental Aesthetics International Craft Exhibition", location: "Louvre Museum, Paris", type: "group" },
-    { year: "2022", name: "Heritage and Innovation Solo Exhibition", location: "Shanghai Museum", type: "solo" },
-    { year: "2021", name: "Asian Traditional Crafts Joint Exhibition", location: "Tokyo National Museum", type: "group" }
+    { year: "2017", name: "Taiwan Craft Competition Award Exhibition", location: "Taiwan Craft Development Association", type: "group" },
+    { year: "2016", name: "Taiwan Craft Development Association Joint Exhibition", location: "Taiwan", type: "group" },
+    { year: "2015", name: "China International Cultural Industries Fair", location: "Shenzhen", type: "group" },
+    { year: "2014", name: "China International Cultural Industries Fair", location: "Shenzhen", type: "group" }
   ];
 
   const awards = locale === 'zh-tw' ? [
-    { year: "2024", name: "聯合國教科文組織工藝獎", organization: "UNESCO", level: "international" },
-    { year: "2023", name: "中華工藝美術獎金獎", organization: "中國工藝美術協會", level: "national" },
-    { year: "2022", name: "亞洲工藝美術大師獎", organization: "亞洲工藝聯盟", level: "international" },
-    { year: "2021", name: "傳統工藝創新獎", organization: "文化部", level: "national" }
+    { year: "2017", name: "台灣工藝競賽獲獎", organization: "台灣工藝發展協會", level: "regional" },
+    { year: "2016", name: "聯展特優金獎", organization: "台灣工藝發展協會", level: "regional" },
+    { year: "2015", name: "百花獎銀獎", organization: "中國國際文化產業博覽會", level: "national" },
+    { year: "2014", name: "百花獎金獎", organization: "中國國際文化產業博覽會", level: "national" },
+    { year: "2008", name: "精品大賽銀獎", organization: "台灣", level: "regional" },
+    { year: "2003", name: "精工藝術精品展銅獎", organization: "台灣", level: "regional" },
+    { year: "1990", name: "百花獎金獎", organization: "輕工部", level: "national" },
+    { year: "1989", name: "世博會金獎", organization: "世界博覽會", level: "international" },
+    { year: "1987", name: "百花獎金獎", organization: "全國工藝美術", level: "national" }
   ] : [
-    { year: "2024", name: "UNESCO Craft Award", organization: "UNESCO", level: "international" },
-    { year: "2023", name: "Chinese Arts & Crafts Gold Award", organization: "China Arts & Crafts Association", level: "national" },
-    { year: "2022", name: "Asian Master Craftsperson Award", organization: "Asian Craft Alliance", level: "international" },
-    { year: "2021", name: "Traditional Craft Innovation Award", organization: "Ministry of Culture", level: "national" }
+    { year: "2017", name: "Taiwan Craft Competition Award", organization: "Taiwan Craft Development Association", level: "regional" },
+    { year: "2016", name: "Joint Exhibition Excellence Gold Award", organization: "Taiwan Craft Development Association", level: "regional" },
+    { year: "2015", name: "Hundred Flowers Award Silver", organization: "China International Cultural Industries Fair", level: "national" },
+    { year: "2014", name: "Hundred Flowers Award Gold", organization: "China International Cultural Industries Fair", level: "national" },
+    { year: "2008", name: "Boutique Competition Silver Award", organization: "Taiwan", level: "regional" },
+    { year: "2003", name: "Fine Arts Exhibition Bronze Award", organization: "Taiwan", level: "regional" },
+    { year: "1990", name: "Hundred Flowers Award Gold", organization: "Ministry of Light Industry", level: "national" },
+    { year: "1989", name: "World Expo Gold Award", organization: "World Exhibition", level: "international" },
+    { year: "1987", name: "Hundred Flowers Award Gold", organization: "National Arts & Crafts", level: "national" }
   ];
 
   return (
-    <div className="min-h-screen bg-white">
+    <div className="min-h-screen paper-texture">
       <ExtensionStatus />
       <Header navigation={navigation} />
       
@@ -164,35 +175,35 @@ export default async function AboutPage({
         {/* Hero Section */}
         <HeroSection
           title={locale === 'zh-tw' ? '關於我們' : 'About Us'}
-          subtitle={locale === 'zh-tw' ? '傳統工藝的現代傳承' : 'Modern Heritage of Traditional Craftsmanship'}
+          subtitle={locale === 'zh-tw' ? '湘繡世家的傳承與創新' : 'Heritage and Innovation of Xiang Embroidery'}
           description={locale === 'zh-tw' 
-            ? '慧繡雅集致力於傳承和發揚中華傳統刺繡工藝，結合現代美學理念，創造出具有時代特色的精美作品。我們相信，每一針每一線都承載著深厚的文化內涵，每一件作品都是藝術與心靈的完美結合。'
-            : 'Hui Embroidery is dedicated to preserving and promoting traditional Chinese embroidery craftsmanship, combining modern aesthetic concepts to create exquisite works with contemporary characteristics. We believe that every stitch carries profound cultural connotations, and every piece is a perfect combination of art and soul.'
+            ? '慧繡雅集由國際刺繡大師毛慧創立，專注於湘繡藝術的傳承與創新。作為鬅毛針法第三代傳承人，我們將三十餘年的精湛技藝與現代美學完美結合，為高端客戶提供獨一無二的高級訂製刺繡服務。'
+            : 'Hui Embroidery was founded by international embroidery master Mao Hui, focusing on the inheritance and innovation of Xiang embroidery art. As the third-generation inheritor of the Maomao technique, we perfectly combine over thirty years of exquisite craftsmanship with modern aesthetics, providing unique haute couture embroidery services for high-end clients.'
           }
         />
 
         {/* Story Section */}
         <StorySection
-          title={locale === 'zh-tw' ? '我們的故事' : 'Our Story'}
-          subtitle={locale === 'zh-tw' ? '三十年的藝術之路' : 'Thirty Years of Artistic Journey'}
+          title={locale === 'zh-tw' ? '傳承之路' : 'Heritage Journey'}
+          subtitle={locale === 'zh-tw' ? '三十餘年的湘繡藝術歷程' : 'Over Thirty Years of Xiang Embroidery Artistry'}
           description={locale === 'zh-tw' 
-            ? '從一針一線的學習開始，到成為國家級工藝美術大師，這是一段充滿挑戰與收穫的藝術之路。每一個重要時刻，都見證著我們對傳統工藝的堅持與創新。'
-            : 'From learning stitch by stitch to becoming a national master of arts and crafts, this is an artistic journey filled with challenges and rewards. Every important moment witnesses our persistence and innovation in traditional craftsmanship.'
+            ? '從1987年首次獲獎開始，毛慧大師在湘繡藝術道路上不斷精進，將傳統鬅毛針法發揚光大，作品屢獲國際殊榮，見證了湘繡藝術的傳承與創新。'
+            : 'Starting from the first award in 1987, Master Mao Hui has continuously advanced on the path of Xiang embroidery art, promoting the traditional Maomao technique and winning international honors, witnessing the inheritance and innovation of Xiang embroidery art.'
           }
           milestones={milestones}
         />
 
         {/* Master Section */}
         <MasterSection
-          title={locale === 'zh-tw' ? '工藝大師' : 'Master Craftsperson'}
-          subtitle={locale === 'zh-tw' ? '傳承者與創新者' : 'Inheritor and Innovator'}
+          title={locale === 'zh-tw' ? '大師風範' : 'Master Excellence'}
+          subtitle={locale === 'zh-tw' ? '鬅毛針法的傳承者' : 'Inheritor of Maomao Technique'}
           master={master}
         />
 
         {/* Achievements Section */}
         <AchievementsSection
-          title={locale === 'zh-tw' ? '榮譽成就' : 'Honors & Achievements'}
-          subtitle={locale === 'zh-tw' ? '三十年來的輝煌歷程' : 'Thirty Years of Brilliant Journey'}
+          title={locale === 'zh-tw' ? '榮譽殿堂' : 'Hall of Honors'}
+          subtitle={locale === 'zh-tw' ? '三十餘年來的卓越成就' : 'Outstanding Achievements Over Thirty Years'}
           stats={stats}
           exhibitions={exhibitions}
           awards={awards}
