@@ -70,5 +70,27 @@
       "error": "Failed to load contact info",
       "retry": "Retry"
     }
+  },
+  "Contact": {
+    "title": "Contact Us",
+    "subtitle": "Professional Consultation & Haute Couture Services", 
+    "description": "We look forward to sharing the wonderful world of Xiang embroidery art with you.",
+    "form": {
+      "title": "Contact Form",
+      "name": "Name",
+      "email": "Email",
+      "phone": "Phone", 
+      "subject": "Subject",
+      "message": "Message",
+      "submit": "Send Message",
+      "success": "Message sent successfully!",
+      "error": "Failed to send. Please try again."
+    },
+    "info": {
+      "address": "Studio Address",
+      "phone": "Phone",
+      "email": "Email", 
+      "hours": "Business Hours"
+    }
   }
 }

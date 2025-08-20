@@ -17,7 +17,7 @@ export default function GalleryPage() {
   const searchParams = useSearchParams();
   
   const [artworks, setArtworks] = useState<Artwork[]>([]);
-  const [totalCount, setTotalCount] = useState(0);
+  const [totalCount, setTotalCount] = useState<number>(0); // 明確初始化為 0
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
   const [currentPage, setCurrentPage] = useState(1);
@@ -47,13 +47,20 @@ export default function GalleryPage() {
       setLoading(true);
       setError(null);
       const response: ApiResponse<Artwork> = await artworksApi.getArtworks(params);
-      setArtworks(response.results);
-      setTotalCount(response.count);
-      setHasNextPage(!!response.next);
+      
+      // 安全地設置數據，即使 response 為空也能處理
+      setArtworks(response?.results || []);
+      setTotalCount(response?.count || 0);
+      setHasNextPage(!!response?.next);
       setCurrentPage(params.page || 1);
     } catch (err) {
       setError(err instanceof Error ? err.message : 'Failed to load artworks');
       console.error('Failed to fetch artworks:', err);
+      
+      // 設置後備數據
+      setArtworks([]);
+      setTotalCount(0);
+      setHasNextPage(false);
     } finally {
       setLoading(false);
     }
@@ -98,7 +105,7 @@ export default function GalleryPage() {
   // 翻譯文字
   const texts = {
     title: locale === 'zh-tw' ? '作品集' : 'Gallery',
-    subtitle: locale === 'zh-tw' ? '精美的刺繡藝術作品展示' : 'Showcase of Exquisite Embroidery Artworks',
+    subtitle: locale === 'zh-tw' ? '精美的湘繡藝術作品展示' : 'Showcase of Exquisite Xiang Embroidery Artworks',
     viewDetails: locale === 'zh-tw' ? '查看詳情' : 'View Details',
     noArtworks: locale === 'zh-tw' ? '沒有找到作品' : 'No Artworks Found',
     loadingMore: locale === 'zh-tw' ? '載入更多' : 'Load More',
@@ -152,8 +159,8 @@ export default function GalleryPage() {
             <p className="text-xl text-gray-600 max-w-2xl mx-auto">
               {texts.subtitle}
             </p>
-            {/* 結果計數 */}
-            {!loading && (
+            {/* 結果計數 - 添加安全檢查 */}
+            {!loading && totalCount !== undefined && totalCount >= 0 && (
               <p className="text-sm text-gray-500 mt-4">
                 {texts.totalResults.replace('{count}', totalCount.toString())}
               </p>

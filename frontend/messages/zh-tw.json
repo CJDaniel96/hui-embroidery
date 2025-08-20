@@ -70,5 +70,27 @@
       "error": "載入聯絡資訊失敗",
       "retry": "重新載入"
     }
+  },
+  "Contact": {
+    "title": "聯絡我們",
+    "subtitle": "專業諮詢與高級訂製服務",
+    "description": "我們期待與您交流湘繡藝術的美妙世界。",
+    "form": {
+      "title": "聯絡表單",
+      "name": "姓名",
+      "email": "電子郵件",
+      "phone": "電話",
+      "subject": "諮詢主題",
+      "message": "詳細需求",
+      "submit": "發送訊息",
+      "success": "訊息已成功發送！",
+      "error": "發送失敗，請稍後再試。"
+    },
+    "info": {
+      "address": "工作室地址",
+      "phone": "聯絡電話",
+      "email": "電子郵件",
+      "hours": "營業時間"
+    }
   }
 }
