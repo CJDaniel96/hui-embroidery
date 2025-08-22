@@ -1,8 +1,8 @@
 'use client';
 
 import { useTranslations } from 'next-intl';
-import { Card, CardContent } from '@/components/ui/card';
-import { Button } from '@/components/ui/button';
+import { Card, CardContent } from '@/components/ui/Card';
+import { Button } from '@/components/ui/Button';
 import { Link } from '@/i18n/navigation';
 import Image from 'next/image';
 
@@ -33,7 +33,7 @@ const MasterSection = () => {
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent"></div>
               </div>
-              <div className="absolute -bottom-6 -right-6 w-24 h-24 bg-gradient-to-br from-red-500 to-red-700 rounded-full opacity-20"></div>
+              <div className="absolute -bottom-6 -right-6 w-24 h-24 bg-gradient-to-br from-red-900 to-red-800 rounded-full opacity-20"></div>
             </div>
 
             {/* Content */}
@@ -45,7 +45,7 @@ const MasterSection = () => {
                 <p className="text-xl text-muted-foreground font-sans">
                   {t('master.subtitle')}
                 </p>
-                <div className="w-20 h-1 bg-gradient-to-r from-red-500 to-red-700 mt-6"></div>
+                <div className="w-20 h-1 bg-gradient-to-r from-red-900 to-red-800 mt-6"></div>
               </div>
 
               <div className="prose prose-lg max-w-none">
@@ -70,7 +70,7 @@ const MasterSection = () => {
                         className="flex items-start space-x-3 animate-fade-in"
                         style={{ animationDelay: `${index * 0.1}s` }}
                       >
-                        <div className="w-2 h-2 bg-red-600 rounded-full mt-2 flex-shrink-0"></div>
+                        <div className="w-2 h-2 bg-red-900 rounded-full mt-2 flex-shrink-0"></div>
                         <span className="text-foreground font-sans text-sm leading-relaxed">{achievement}</span>
                       </div>
                     ))}
@@ -95,9 +95,15 @@ const MasterSection = () => {
                 <Link href="/master">
                   <Button 
                     variant="outline"
-                    className="text-red-600 border-red-600 hover:bg-red-600 hover:text-white transition-colors"
+                    className="group relative px-8 py-3 text-red-900 border-2 border-red-900/20 bg-white/80 backdrop-blur-sm hover:border-red-900/40 hover:bg-red-900 hover:text-white transition-all duration-300 shadow-lg hover:shadow-xl hover:shadow-red-900/25 hover:-translate-y-0.5 rounded-xl font-serif font-medium tracking-wide"
                   >
-                    了解更多大師故事
+                    <span className="relative z-10 flex items-center gap-2">
+                      了解更多大師故事
+                      <svg className="w-4 h-4 transition-transform duration-300 group-hover:translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
+                      </svg>
+                    </span>
+                    <div className="absolute inset-0 rounded-xl bg-gradient-to-r from-red-900/10 to-red-800/10 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
                   </Button>
                 </Link>
               </div>

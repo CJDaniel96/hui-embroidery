@@ -1,8 +1,8 @@
 'use client';
 
 import { useTranslations } from 'next-intl';
-import { Card, CardContent } from '@/components/ui/card';
-import { Button } from '@/components/ui/button';
+import { Card, CardContent } from '@/components/ui/Card';
+import { Button } from '@/components/ui/Button';
 import { Skeleton } from '@/components/ui/skeleton';
 import { Link } from '@/i18n/navigation';
 import Image from 'next/image';
@@ -72,7 +72,7 @@ const GallerySection = () => {
             <p className="text-xl text-muted-foreground font-sans">
               {t('gallery.subtitle')}
             </p>
-            <div className="w-20 h-1 bg-gradient-to-r from-red-500 to-red-700 mx-auto mt-6"></div>
+            <div className="w-20 h-1 bg-gradient-to-r from-red-900 to-red-800 mx-auto mt-6"></div>
           </div>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
@@ -105,7 +105,7 @@ const GallerySection = () => {
           <p className="text-xl text-muted-foreground font-sans">
             {t('gallery.subtitle')}
           </p>
-          <div className="w-20 h-1 bg-gradient-to-r from-red-500 to-red-700 mx-auto mt-6"></div>
+          <div className="w-20 h-1 bg-gradient-to-r from-red-900 to-red-800 mx-auto mt-6"></div>
         </div>
 
         {error && (
@@ -162,10 +162,10 @@ const GallerySection = () => {
           <Link href="/gallery">
             <Button 
               variant="ghost" 
-              className="text-red-600 hover:text-red-700 hover:bg-red-50 font-medium text-lg transition-smooth relative group"
+              className="text-red-900 hover:text-red-800 hover:bg-red-50 font-medium text-lg transition-smooth relative group"
             >
               {t('gallery.viewMore')}
-              <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-red-600 transition-all duration-300 group-hover:w-full"></span>
+              <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-red-900 transition-all duration-300 group-hover:w-full"></span>
             </Button>
           </Link>
         </div>

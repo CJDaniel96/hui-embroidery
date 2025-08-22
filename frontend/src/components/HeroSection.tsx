@@ -1,5 +1,5 @@
 import { useTranslations } from 'next-intl';
-import { Button } from '@/components/ui/button';
+import { Button } from '@/components/ui/Button';
 import Image from 'next/image';
 
 const HeroSection = () => {
@@ -30,7 +30,7 @@ const HeroSection = () => {
           <p className="text-xl md:text-2xl text-white/90 mb-8 max-w-2xl mx-auto leading-relaxed font-sans">
             {t('hero.description')}
           </p>
-          <Button size="lg" className="text-lg px-8 py-6 shadow-elegant hover:shadow-glow transition-elegant">
+          <Button size="lg" className="bg-red-900 hover:bg-red-800 text-white text-lg px-8 py-6 shadow-elegant hover:shadow-glow transition-elegant">
             {t('hero.cta')}
           </Button>
         </div>

@@ -25,6 +25,10 @@ export const routing = defineRouting({
     '/contact': {
       'zh-tw': '/contact',
       'en': '/contact'
+    },
+    '/booking': {
+      'zh-tw': '/booking',
+      'en': '/booking'
     }
   }
 });

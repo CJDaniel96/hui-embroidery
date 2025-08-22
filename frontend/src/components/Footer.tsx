@@ -31,7 +31,7 @@ const Footer = () => {
             {/* Brand */}
             <div className="space-y-4">
               <div className="flex items-center space-x-2">
-                <div className="w-8 h-8 bg-gradient-to-br from-red-500 to-red-700 rounded-full flex items-center justify-center">
+                <div className="w-8 h-8 bg-gradient-to-br from-red-900 to-red-800 rounded-full flex items-center justify-center">
                   <span className="text-white font-bold text-sm">慧</span>
                 </div>
                 <div>
@@ -50,25 +50,25 @@ const Footer = () => {
               <nav className="space-y-2">
                 <button 
                   onClick={() => scrollToSection('#home')}
-                  className="block text-gray-300 hover:text-red-400 transition-smooth font-sans text-sm text-left"
+                  className="block text-gray-300 hover:text-red-300 transition-smooth font-sans text-sm text-left"
                 >
                   {t('nav.home')}
                 </button>
                 <button 
                   onClick={() => scrollToSection('#gallery')}
-                  className="block text-gray-300 hover:text-red-400 transition-smooth font-sans text-sm text-left"
+                  className="block text-gray-300 hover:text-red-300 transition-smooth font-sans text-sm text-left"
                 >
                   {t('nav.gallery')}
                 </button>
                 <button 
                   onClick={() => scrollToSection('#master')}
-                  className="block text-gray-300 hover:text-red-400 transition-smooth font-sans text-sm text-left"
+                  className="block text-gray-300 hover:text-red-300 transition-smooth font-sans text-sm text-left"
                 >
                   {t('nav.master')}
                 </button>
                 <button 
                   onClick={() => scrollToSection('#contact')}
-                  className="block text-gray-300 hover:text-red-400 transition-smooth font-sans text-sm text-left"
+                  className="block text-gray-300 hover:text-red-300 transition-smooth font-sans text-sm text-left"
                 >
                   {t('nav.contact')}
                 </button>

@@ -1,11 +1,12 @@
 'use client';
 
 import { useTranslations } from 'next-intl';
-import { Card, CardContent } from '@/components/ui/card';
-import { Button } from '@/components/ui/button';
-import { Input } from '@/components/ui/input';
+import { Card, CardContent } from '@/components/ui/Card';
+import { Button } from '@/components/ui/Button';
+import { Input } from '@/components/ui/Input';
 import { Textarea } from '@/components/ui/textarea';
 import { Label } from '@/components/ui/label';
+import { Link } from '@/i18n/navigation';
 import { Mail, Phone, MapPin, Clock, Send, CheckCircle, AlertCircle } from 'lucide-react';
 import { useContactForm } from '@/hooks/useContactForm';
 import { useContactInfo, useSocialMedia } from '@/hooks/useContactInfo';
@@ -77,7 +78,7 @@ const ContactSection = () => {
             <p className="text-xl text-muted-foreground font-sans">
               {t('contact.subtitle')}
             </p>
-            <div className="w-20 h-1 bg-gradient-to-r from-red-500 to-red-700 mx-auto mt-6"></div>
+            <div className="w-20 h-1 bg-gradient-to-r from-red-900 to-red-800 mx-auto mt-6"></div>
           </div>
 
           <div className="grid lg:grid-cols-2 gap-12">
@@ -97,7 +98,7 @@ const ContactSection = () => {
                   >
                     <CardContent className="p-4">
                       <div className="flex items-center space-x-4">
-                        <div className="w-10 h-10 bg-gradient-to-br from-red-500 to-red-700 rounded-lg flex items-center justify-center group-hover:scale-105 transition-elegant">
+                        <div className="w-10 h-10 bg-gradient-to-br from-red-900 to-red-800 rounded-lg flex items-center justify-center group-hover:scale-105 transition-elegant">
                           <info.icon className="w-5 h-5 text-white" />
                         </div>
                         <div className="flex-1">
@@ -111,7 +112,7 @@ const ContactSection = () => {
                           ) : (
                             <a 
                               href={info.link}
-                              className="text-red-600 hover:text-red-700 transition-smooth font-sans text-sm"
+                              className="text-red-900 hover:text-red-800 transition-smooth font-sans text-sm"
                             >
                               {info.value}
                             </a>
@@ -136,7 +137,7 @@ const ContactSection = () => {
                         href={social.url}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="w-10 h-10 bg-gray-200 hover:bg-red-600 text-gray-600 hover:text-white rounded-lg flex items-center justify-center transition-colors"
+                        className="w-10 h-10 bg-gray-200 hover:bg-red-900 text-gray-600 hover:text-white rounded-lg flex items-center justify-center transition-colors"
                         title={social.platform_display}
                       >
                         <span className="text-sm font-medium">
@@ -222,7 +223,7 @@ const ContactSection = () => {
                     <Button 
                       type="submit"
                       disabled={!isValid || isSubmitting}
-                      className="w-full bg-red-600 hover:bg-red-700 text-white"
+                      className="w-full bg-red-900 hover:bg-red-800 text-white"
                     >
                       {isSubmitting ? (
                         <>
@@ -249,7 +250,7 @@ const ContactSection = () => {
 
           {/* CTA - 預約參觀 */}
           <div className="text-center mt-16">
-            <Card className="bg-gradient-to-br from-red-600 to-red-700 border-0 shadow-elegant animate-fade-in">
+            <Card className="bg-gradient-to-br from-red-900 to-red-800 border-0 shadow-elegant animate-fade-in">
               <CardContent className="p-8">
                 <h3 className="text-2xl font-serif font-bold text-white mb-4">
                   {t('contact.appointment')}
@@ -257,12 +258,14 @@ const ContactSection = () => {
                 <p className="text-white/90 mb-6 font-sans max-w-2xl mx-auto">
                   {t('contact.appointmentDesc')}
                 </p>
-                <Button 
-                  size="lg"
-                  className="bg-white text-red-600 hover:bg-gray-100 transition-colors px-8 py-3"
-                >
-                  {t('contact.bookNow')}
-                </Button>
+                <Link href="/booking">
+                  <Button 
+                    size="lg"
+                    className="bg-white text-red-900 hover:bg-gray-100 transition-colors px-8 py-3"
+                  >
+                    {t('contact.bookNow')}
+                  </Button>
+                </Link>
               </CardContent>
             </Card>
           </div>
