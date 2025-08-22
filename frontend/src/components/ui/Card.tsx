@@ -1,77 +1,92 @@
-'use client';
+import * as React from "react"
 
-import { HTMLAttributes, forwardRef } from 'react';
-import { cn } from '@/lib/utils';
+import { cn } from "@/lib/utils"
 
-interface CardProps extends HTMLAttributes<HTMLDivElement> {
-  variant?: 'default' | 'elevated' | 'minimal' | 'artwork';
-  children: React.ReactNode;
+function Card({ className, ...props }: React.ComponentProps<"div">) {
+  return (
+    <div
+      data-slot="card"
+      className={cn(
+        "bg-card text-card-foreground flex flex-col gap-6 rounded-xl border py-6 shadow-sm",
+        className
+      )}
+      {...props}
+    />
+  )
 }
 
-const Card = forwardRef<HTMLDivElement, CardProps>(
-  ({ className, variant = 'default', children, ...props }, ref) => {
-    const baseStyles = `
-      relative overflow-hidden transition-all duration-300
-      bg-moon-white-pure border border-smoke-lightest
-      rounded-lg
-    `;
+function CardHeader({ className, ...props }: React.ComponentProps<"div">) {
+  return (
+    <div
+      data-slot="card-header"
+      className={cn(
+        "@container/card-header grid auto-rows-min grid-rows-[auto_auto] items-start gap-1.5 px-6 has-data-[slot=card-action]:grid-cols-[1fr_auto] [.border-b]:pb-6",
+        className
+      )}
+      {...props}
+    />
+  )
+}
 
-    const variants = {
-      // 預設卡片 - 美術館標準展示
-      default: `
-        shadow-sm hover:shadow-md hover:-translate-y-1
-        border-smoke-lightest hover:border-smoke-lighter
-        transition-all duration-300
-      `,
-      
-      // 浮起卡片 - 重要內容展示
-      elevated: `
-        shadow-md hover:shadow-xl hover:-translate-y-2
-        border-smoke-lighter hover:border-smoke-light
-        transition-all duration-300
-      `,
-      
-      // 極簡卡片 - 純淨展示
-      minimal: `
-        shadow-none border-0 bg-transparent
-        hover:bg-moon-white-soft
-        transition-all duration-300
-      `,
-      
-      // 作品卡片 - 藝術品專用展示
-      artwork: `
-        shadow-md hover:shadow-2xl hover:-translate-y-3
-        border-smoke-lightest hover:border-sand-gold/20
-        hover:shadow-gold-md
-        transition-all duration-500
-        group
-      `
-    };
+function CardTitle({ className, ...props }: React.ComponentProps<"div">) {
+  return (
+    <div
+      data-slot="card-title"
+      className={cn("leading-none font-semibold", className)}
+      {...props}
+    />
+  )
+}
 
-    return (
-      <div
-        ref={ref}
-        className={cn(
-          baseStyles,
-          variants[variant],
-          className
-        )}
-        {...props}
-      >
-        {/* 作品卡片的金色光暈效果 */}
-        {variant === 'artwork' && (
-          <div className="absolute inset-0 bg-sand-gold/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none"></div>
-        )}
-        
-        {/* 內容層 */}
-        <div className="relative z-10">
-          {children}
-        </div>
-      </div>
-    );
-  }
-);
+function CardDescription({ className, ...props }: React.ComponentProps<"div">) {
+  return (
+    <div
+      data-slot="card-description"
+      className={cn("text-muted-foreground text-sm", className)}
+      {...props}
+    />
+  )
+}
 
-Card.displayName = 'Card';
+function CardAction({ className, ...props }: React.ComponentProps<"div">) {
+  return (
+    <div
+      data-slot="card-action"
+      className={cn(
+        "col-start-2 row-span-2 row-start-1 self-start justify-self-end",
+        className
+      )}
+      {...props}
+    />
+  )
+}
 
-export default Card;
+function CardContent({ className, ...props }: React.ComponentProps<"div">) {
+  return (
+    <div
+      data-slot="card-content"
+      className={cn("px-6", className)}
+      {...props}
+    />
+  )
+}
+
+function CardFooter({ className, ...props }: React.ComponentProps<"div">) {
+  return (
+    <div
+      data-slot="card-footer"
+      className={cn("flex items-center px-6 [.border-t]:pt-6", className)}
+      {...props}
+    />
+  )
+}
+
+export {
+  Card,
+  CardHeader,
+  CardFooter,
+  CardTitle,
+  CardAction,
+  CardDescription,
+  CardContent,
+}

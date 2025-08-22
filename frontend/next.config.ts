@@ -4,7 +4,7 @@ import createNextIntlPlugin from 'next-intl/plugin';
 const nextConfig: NextConfig = {
   /* config options here */
   images: {
-    domains: ['localhost'], // 允許載入本地圖片
+    domains: ['localhost'],
     remotePatterns: [
       {
         protocol: 'http',
@@ -13,6 +13,8 @@ const nextConfig: NextConfig = {
         pathname: '/media/**',
       },
     ],
+    // 圖片格式優化
+    formats: ['image/webp', 'image/avif'],
   },
 };
 

@@ -1,0 +1,31 @@
+'use client';
+
+import { useLocale } from 'next-intl';
+import { usePathname } from '@/i18n/navigation';
+import { Link } from '@/i18n/navigation';
+import { Button } from '@/components/ui/button';
+import { Globe } from 'lucide-react';
+
+const LanguageToggle = () => {
+  const locale = useLocale();
+  const pathname = usePathname();
+
+  // 決定要切換到的語言
+  const targetLocale = locale === 'zh-tw' ? 'en' : 'zh-tw';
+  const displayText = locale === 'zh-tw' ? 'EN' : '中文';
+
+  return (
+    <Link href={pathname} locale={targetLocale}>
+      <Button
+        variant="ghost"
+        size="sm"
+        className="text-gray-700 hover:text-red-600 hover:bg-red-50 transition-smooth"
+      >
+        <Globe className="w-4 h-4 mr-2" />
+        {displayText}
+      </Button>
+    </Link>
+  );
+};
+
+export default LanguageToggle;
