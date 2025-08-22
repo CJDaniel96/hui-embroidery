@@ -77,7 +77,7 @@ const GallerySection = () => {
 
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
             {[1, 2, 3].map((i) => (
-              <Card key={i} className="overflow-hidden bg-card border-border/50">
+              <Card key={i} className="overflow-hidden bg-card border-border/50 p-0">
                 <CardContent className="p-0">
                   <Skeleton className="w-full h-64" />
                   <div className="p-6 space-y-3">
@@ -121,7 +121,7 @@ const GallerySection = () => {
           {artworks.map((artwork, index) => (
             <Card 
               key={artwork.id} 
-              className="group cursor-pointer transition-elegant hover:shadow-elegant bg-card border-border/50 overflow-hidden animate-slide-up"
+              className="group cursor-pointer transition-elegant hover:shadow-elegant bg-card border-border/50 overflow-hidden animate-slide-up p-0"
               style={{ animationDelay: `${index * 0.2}s` }}
             >
               <CardContent className="p-0">
