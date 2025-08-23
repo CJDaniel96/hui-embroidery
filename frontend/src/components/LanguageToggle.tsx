@@ -1,6 +1,6 @@
 'use client';
 
-import { useLocale } from 'next-intl';
+import { useLocale, useTranslations } from 'next-intl';
 import { usePathname } from '@/i18n/navigation';
 import { Link } from '@/i18n/navigation';
 import { Button } from '@/components/ui/Button';
@@ -9,10 +9,11 @@ import { Globe } from 'lucide-react';
 const LanguageToggle = () => {
   const locale = useLocale();
   const pathname = usePathname();
+  const t = useTranslations();
 
   // 決定要切換到的語言
   const targetLocale = locale === 'zh-tw' ? 'en' : 'zh-tw';
-  const displayText = locale === 'zh-tw' ? 'EN' : '中文';
+  const displayText = locale === 'zh-tw' ? t('language.english') : t('language.chinese');
 
   return (
     <Link href={pathname} locale={targetLocale}>

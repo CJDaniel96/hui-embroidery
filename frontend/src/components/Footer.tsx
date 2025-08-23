@@ -80,16 +80,16 @@ const Footer = () => {
               <h4 className="text-lg font-serif font-semibold">{t('footer.contactInfo')}</h4>
               <div className="space-y-2 text-sm font-sans">
                 <p className="text-gray-300">
-                  {contactInfo?.address || "蘇州市姑蘇區 刺繡藝術街88號"}
+                  {contactInfo?.address || t('contact.defaults.address')}
                 </p>
                 <p className="text-gray-300">
-                  電話: {contactInfo?.phone || "+86 138 0000 0000"}
+                  {t('contact.phone')}: {contactInfo?.phone || t('contact.defaults.phone')}
                 </p>
                 <p className="text-gray-300">
-                  郵箱: {contactInfo?.email || "contact@hui-embroidery.com"}
+                  {t('contact.email')}: {contactInfo?.email || t('contact.defaults.email')}
                 </p>
                 <p className="text-gray-300">
-                  {contactInfo?.business_hours || "週一至週六 9:00-17:00"}
+                  {contactInfo?.business_hours || t('contact.defaults.hours')}
                 </p>
               </div>
             </div>

@@ -31,10 +31,10 @@ const ContactSection = () => {
   // 處理表單提交結果
   useEffect(() => {
     if (isSuccess) {
-      toast.success('訊息發送成功！我們會盡快回覆您。');
+      toast.success(t('contact.form.success'));
     }
     if (error) {
-      toast.error('發送失敗，請稍後再試或直接聯繫我們。');
+      toast.error(t('contact.form.error'));
     }
   }, [isSuccess, error]);
 
@@ -55,13 +55,13 @@ const ContactSection = () => {
     {
       icon: MapPin,
       title: t('contact.address'),
-      value: contactInfo?.address || "蘇州市姑蘇區 刺繡藝術街88號",
+      value: contactInfo?.address || t('contact.defaults.address'),
       link: "#"
     },
     {
       icon: Clock,
       title: t('contact.hours'),
-      value: contactInfo?.business_hours || "週一至週六 9:00-17:00",
+      value: contactInfo?.business_hours || t('contact.defaults.hours'),
       link: "#"
     }
   ];
@@ -85,7 +85,7 @@ const ContactSection = () => {
             {/* 左側：聯絡資訊 */}
             <div className="space-y-6">
               <h3 className="text-2xl font-serif font-bold text-foreground mb-6">
-                聯絡資訊
+                {t('contact.info')}
               </h3>
               
               {/* Contact Cards */}
@@ -128,7 +128,7 @@ const ContactSection = () => {
               {socialMedia && socialMedia.length > 0 && (
                 <div className="pt-6">
                   <h4 className="font-serif font-semibold text-foreground mb-4">
-                    追蹤我們
+                    {t('contact.followUs')}
                   </h4>
                   <div className="flex space-x-3">
                     {socialMedia.map((social) => (
@@ -153,7 +153,7 @@ const ContactSection = () => {
             {/* 右側：聯絡表單 */}
             <div>
               <h3 className="text-2xl font-serif font-bold text-foreground mb-6">
-                發送訊息
+                {t('contact.sendMessage')}
               </h3>
               
               <Card className="bg-card border-border/50">
@@ -161,24 +161,24 @@ const ContactSection = () => {
                   <form onSubmit={handleSubmit} className="space-y-4">
                     <div className="grid md:grid-cols-2 gap-4">
                       <div>
-                        <Label htmlFor="name">姓名 *</Label>
+                        <Label htmlFor="name">{t('contact.form.nameRequired')}</Label>
                         <Input
                           id="name"
                           type="text"
                           value={formData.name}
                           onChange={(e) => updateField('name', e.target.value)}
-                          placeholder="請輸入您的姓名"
+                          placeholder={t('contact.form.namePlaceholder')}
                           required
                         />
                       </div>
                       <div>
-                        <Label htmlFor="email">電子郵件 *</Label>
+                        <Label htmlFor="email">{t('contact.form.emailRequired')}</Label>
                         <Input
                           id="email"
                           type="email"
                           value={formData.email}
                           onChange={(e) => updateField('email', e.target.value)}
-                          placeholder="請輸入您的電子郵件"
+                          placeholder={t('contact.form.emailPlaceholder')}
                           required
                         />
                       </div>
@@ -186,35 +186,35 @@ const ContactSection = () => {
 
                     <div className="grid md:grid-cols-2 gap-4">
                       <div>
-                        <Label htmlFor="phone">電話號碼</Label>
+                        <Label htmlFor="phone">{t('contact.form.phone')}</Label>
                         <Input
                           id="phone"
                           type="tel"
                           value={formData.phone}
                           onChange={(e) => updateField('phone', e.target.value)}
-                          placeholder="請輸入您的電話號碼"
+                          placeholder={t('contact.form.phonePlaceholder')}
                         />
                       </div>
                       <div>
-                        <Label htmlFor="subject">主旨 *</Label>
+                        <Label htmlFor="subject">{t('contact.form.subjectRequired')}</Label>
                         <Input
                           id="subject"
                           type="text"
                           value={formData.subject}
                           onChange={(e) => updateField('subject', e.target.value)}
-                          placeholder="請輸入主旨"
+                          placeholder={t('contact.form.subjectPlaceholder')}
                           required
                         />
                       </div>
                     </div>
 
                     <div>
-                      <Label htmlFor="message">訊息內容 *</Label>
+                      <Label htmlFor="message">{t('contact.form.messageRequired')}</Label>
                       <Textarea
                         id="message"
                         value={formData.message}
                         onChange={(e) => updateField('message', e.target.value)}
-                        placeholder="請輸入您的訊息內容..."
+                        placeholder={t('contact.form.messagePlaceholder')}
                         rows={5}
                         required
                       />
@@ -228,17 +228,17 @@ const ContactSection = () => {
                       {isSubmitting ? (
                         <>
                           <AlertCircle className="w-4 h-4 mr-2 animate-spin" />
-                          發送中...
+                          {t('contact.form.sending')}
                         </>
                       ) : isSuccess ? (
                         <>
                           <CheckCircle className="w-4 h-4 mr-2" />
-                          已發送成功
+                          {t('contact.form.sent')}
                         </>
                       ) : (
                         <>
                           <Send className="w-4 h-4 mr-2" />
-                          發送訊息
+                          {t('contact.form.send')}
                         </>
                       )}
                     </Button>

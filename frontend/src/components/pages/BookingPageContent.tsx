@@ -70,10 +70,10 @@ const BookingPageContent = () => {
           {/* Header */}
           <div className="text-center mb-12 animate-fade-in">
             <h1 className="text-4xl md:text-5xl font-serif font-bold text-foreground mb-4">
-              預約參觀工作室
+              {t('booking.title')}
             </h1>
             <p className="text-xl text-muted-foreground max-w-2xl mx-auto leading-relaxed">
-              體驗傳統刺繡藝術的魅力，深入了解大師的創作過程與技法精髓
+              {t('booking.subtitle')}
             </p>
             <div className="w-20 h-1 bg-gradient-to-r from-red-900 to-red-800 mx-auto mt-6"></div>
           </div>

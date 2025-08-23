@@ -5,12 +5,30 @@ import { Card, CardContent } from '@/components/ui/Card';
 import { Button } from '@/components/ui/Button';
 import { Link } from '@/i18n/navigation';
 import Image from 'next/image';
+import { useMasterContent, useAchievements } from '@/hooks/useSiteContent';
 
 const MasterSection = () => {
   const t = useTranslations();
+  const { data: masterContent } = useMasterContent();
+  const { data: achievements } = useAchievements();
   
-  // 處理獎項陣列
-  const awards = t.raw('awards') as string[];
+  // 使用 API 數據或 fallback 到翻譯文件
+  const title = masterContent?.translations?.master_title || t('master.title');
+  const subtitle = masterContent?.translations?.master_subtitle || t('master.subtitle');
+  const description = masterContent?.translations?.master_description || t('master.description');
+  const description2 = masterContent?.translations?.master_description2 || t('master.description2');
+  const achievementsTitle = masterContent?.translations?.master_achievements_title || t('master.achievements');
+  const techniqueTitle = masterContent?.translations?.master_technique_title || t('master.technique');
+  const techniqueDesc = masterContent?.translations?.master_technique_desc || t('master.techniqueDesc');
+  const masterImage = masterContent?.master_image_url || '/images/master-hands.jpg';
+  
+  // 處理獎項數據，優先使用 API 數據
+  const awards = achievements && achievements.length > 0 
+    ? achievements.map(achievement => {
+        const yearStr = achievement.year ? `${achievement.year}年：` : '';
+        return `${yearStr}${achievement.translations.title}`;
+      })
+    : (t.raw('awards') as string[]);
   
   return (
     <section id="master" className="py-20 bg-white">
@@ -21,7 +39,7 @@ const MasterSection = () => {
             <div className="relative animate-fade-in">
               <div className="relative rounded-2xl overflow-hidden shadow-elegant">
                 <Image
-                  src="/images/master-hands.jpg"
+                  src={masterImage}
                   alt="Master's hands working on embroidery"
                   width={600}
                   height={500}
@@ -40,20 +58,20 @@ const MasterSection = () => {
             <div className="space-y-8 animate-slide-up">
               <div>
                 <h2 className="text-4xl md:text-5xl font-serif font-bold text-foreground mb-4">
-                  {t('master.title')}
+                  {title}
                 </h2>
                 <p className="text-xl text-muted-foreground font-sans">
-                  {t('master.subtitle')}
+                  {subtitle}
                 </p>
                 <div className="w-20 h-1 bg-gradient-to-r from-red-900 to-red-800 mt-6"></div>
               </div>
 
               <div className="prose prose-lg max-w-none">
                 <p className="text-foreground leading-relaxed mb-6 font-sans">
-                  {t('master.description')}
+                  {description}
                 </p>
                 <p className="text-muted-foreground leading-relaxed font-sans">
-                  {t('master.description2')}
+                  {description2}
                 </p>
               </div>
 
@@ -61,7 +79,7 @@ const MasterSection = () => {
               <Card className="bg-muted/50 border-border/50">
                 <CardContent className="p-6">
                   <h3 className="text-lg font-serif font-semibold text-foreground mb-4">
-                    {t('master.achievements')}
+                    {achievementsTitle}
                   </h3>
                   <div className="grid gap-3">
                     {awards.map((achievement, index) => (
@@ -82,32 +100,28 @@ const MasterSection = () => {
               <Card className="bg-red-50 border-red-200">
                 <CardContent className="p-6">
                   <h3 className="text-lg font-serif font-semibold text-foreground mb-4">
-                    {t('master.technique')}
+                    {techniqueTitle}
                   </h3>
                   <p className="text-foreground font-sans leading-relaxed">
-                    {t('master.techniqueDesc')}
+                    {techniqueDesc}
                   </p>
                 </CardContent>
               </Card>
 
-              {/* 了解更多按鈕 */}
-              <div className="pt-4">
-                <Link href="/master">
-                  <Button 
-                    variant="outline"
-                    className="group relative px-8 py-3 text-red-900 border-2 border-red-900/20 bg-white/80 backdrop-blur-sm hover:border-red-900/40 hover:bg-red-900 hover:text-white transition-all duration-300 shadow-lg hover:shadow-xl hover:shadow-red-900/25 hover:-translate-y-0.5 rounded-xl font-serif font-medium tracking-wide"
-                  >
-                    <span className="relative z-10 flex items-center gap-2">
-                      了解更多大師故事
-                      <svg className="w-4 h-4 transition-transform duration-300 group-hover:translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
-                      </svg>
-                    </span>
-                    <div className="absolute inset-0 rounded-xl bg-gradient-to-r from-red-900/10 to-red-800/10 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
-                  </Button>
-                </Link>
-              </div>
             </div>
+          </div>
+
+          {/* 了解更多按鈕 - 置中於整個頁面 */}
+          <div className="text-center mt-12">
+            <Link href="/master">
+              <Button 
+                variant="ghost" 
+                className="text-red-900 hover:text-red-800 hover:bg-red-50 font-medium text-lg transition-smooth relative group"
+              >
+                {t('master.learnMore')}
+                <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-red-900 transition-all duration-300 group-hover:w-full"></span>
+              </Button>
+            </Link>
           </div>
         </div>
       </div>

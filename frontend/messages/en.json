@@ -17,57 +17,6 @@
     "description": "Hui Embroidery combines traditional Xiang embroidery with contemporary aesthetics, creating haute couture artworks that honor heritage while embracing innovation, showcasing the precious value of world intangible cultural heritage.",
     "cta": "Explore Artistic Beauty"
   },
-  "master": {
-    "title": "Master's Legacy",
-    "subtitle": "International Embroidery Master Mao Hui",
-    "description": "Founded by international embroidery master Mao Hui, Hui Embroidery focuses on the inheritance and innovation of Xiang embroidery art, providing unique haute couture embroidery services for discerning clients. Master Mao comes from a family of Xiang embroidery artisans, trained under Asia-Pacific Master and Chinese Arts & Crafts Master Zhou Jinxiu, with over 30 years of exquisite craftsmanship.",
-    "description2": "She is the third-generation inheritor of the unique 'Mao Zhen' (hair stitch) technique. Her works have won numerous international awards and are highly praised by collectors and art enthusiasts worldwide. Master Mao excels in bold innovation while maintaining traditional techniques.",
-    "achievements": "Major Achievements",
-    "technique": "Unique Technique", 
-    "techniqueDesc": "Third-generation inheritor of the 'Mao Zhen' technique, capable of delicately expressing animal fur and human hair in embroidery, making works more vivid and three-dimensional."
-  },
-  "gallery": {
-    "title": "Masterpiece Collection",
-    "subtitle": "精品典藏",
-    "viewMore": "View More Works",
-    "categories": "Categories",
-    "allCategories": "All Categories",
-    "featured": "Featured Works",
-    "latest": "Latest Works",
-    "viewDetails": "View Details",
-    "technique": "Technique",
-    "medium": "Medium",
-    "dimensions": "Dimensions",
-    "year": "Year Created"
-  },
-  "contact": {
-    "title": "Contact Us",
-    "subtitle": "聯繫我們",
-    "email": "Email",
-    "phone": "Phone",
-    "address": "Studio Address",
-    "hours": "Opening Hours",
-    "appointment": "Studio Visit Appointment",
-    "appointmentDesc": "Welcome to visit our studio to experience the charm of traditional embroidery craftsmanship firsthand, communicate with the master face-to-face, and learn about the stories behind each artwork.",
-    "bookNow": "Book Now",
-    "form": {
-      "name": "Name",
-      "email": "Email",
-      "phone": "Phone",
-      "subject": "Subject",
-      "message": "Message",
-      "send": "Send Message",
-      "sending": "Sending...",
-      "success": "Message sent successfully!",
-      "error": "Failed to send message. Please try again."
-    }
-  },
-  "footer": {
-    "description": "Inheriting thousand-year embroidery craftsmanship, interpreting Oriental artistic spirit with modern aesthetics, committed to helping more people understand and appreciate the beauty of Chinese traditional culture.",
-    "quickLinks": "Quick Links",
-    "contactInfo": "Contact Information",
-    "copyright": "© 2024 Hui Embroidery Artistry 慧繡雅集. All Rights Reserved."
-  },
   "awards": [
     "1987: 'Tang Dynasty Polo' and 'Chime Bell Dance' won National Arts & Crafts Hundred Flowers Award Gold Medal",
     "1989: Multi-panel heterogeneous embroidery 'Li Qingzhao' won World Expo Gold Medal",
@@ -76,6 +25,135 @@
     "2014: 'Oak Forest' won China International Cultural Industries Fair Hundred Flowers Award Gold Medal",
     "2016: Participated in Taiwan Craft Development Association exhibition, work won Special Excellence Gold Award"
   ],
+  "booking": {
+    "title": "Book Studio Visit",
+    "subtitle": "Experience the charm of traditional embroidery art and gain deep insights into the master's creative process and technique essence",
+    "form": {
+      "bookingInfo": "Booking Information",
+      "serviceType": "Service Type",
+      "tour": "Studio Tour (Free)",
+      "workshop": "Embroidery Workshop (NT$2,000/person)",
+      "private": "Private Consultation (NT$500/hour)",
+      "group": "Group Booking (Please Inquire)",
+      "name": "Name",
+      "phone": "Phone",
+      "email": "Email",
+      "date": "Date",
+      "time": "Time",
+      "selectTime": "Select Time",
+      "visitors": "Visitors",
+      "people": "people",
+      "moreThan10": "10+ people",
+      "specialRequests": "Special Requests or Notes",
+      "requestsPlaceholder": "Please tell us about your special needs, interests, or anything you'd like to know...",
+      "confirmBooking": "Confirm Booking",
+      "rebook": "Book Again"
+    },
+    "info": {
+      "openingHours": "Opening Hours",
+      "tuesdayToSaturday": "Tuesday to Saturday",
+      "sunday": "Sunday",
+      "monday": "Monday",
+      "closed": "Closed",
+      "location": "Studio Location",
+      "address": "3F, No.123, Sec.1, Fuxing S. Rd., Da'an Dist., Taipei City",
+      "transportation": "3-minute walk from MRT Zhongxiao Fuxing Station Exit 2",
+      "notes": "Booking Notes"
+    },
+    "rules": [
+      "Please book 24 hours in advance",
+      "Cancellations require 4 hours notice",
+      "Workshop fees payable on-site",
+      "Photography welcome, please follow studio guidelines"
+    ],
+    "success": {
+      "title": "Booking Successfully Submitted!",
+      "message": "Thank you for your booking. We will contact you within 24 hours to confirm the details."
+    }
+  },
+  "gallery": {
+    "title": "Featured Masterpieces",
+    "subtitle": "精品典藏",
+    "viewMore": "View More Works",
+    "categories": "Categories",
+    "allCategories": "All Categories", 
+    "featured": "Featured Works",
+    "latest": "Latest Works",
+    "viewDetails": "View Details",
+    "technique": "Technique",
+    "medium": "Medium",
+    "dimensions": "Dimensions", 
+    "year": "Year Created",
+    "fallback": {
+      "phoenix": "Phoenix Blessing",
+      "phoenixDesc": "鳳凰呈祥",
+      "phoenixTechnique": "Su Embroidery · Double-sided",
+      "peony": "Peony Prosperity", 
+      "peonyDesc": "牡丹富貴",
+      "peonyTechnique": "Xiang Embroidery · Flat Stitch",
+      "landscape": "Landscape Melody",
+      "landscapeDesc": "山水清音", 
+      "landscapeTechnique": "Shu Embroidery · Blending Stitch",
+      "artwork": "Artwork",
+      "unknownSize": "Unknown Size"
+    },
+    "offline": "Using Offline Artwork Display"
+  },
+  "contact": {
+    "title": "Contact Us",
+    "subtitle": "聯繫我們",
+    "info": "Contact Information",
+    "sendMessage": "Send Message",
+    "followUs": "Follow Us",
+    "email": "Email",
+    "phone": "Phone",
+    "address": "Studio Address",
+    "hours": "Opening Hours",
+    "appointment": "Book Studio Visit",
+    "appointmentDesc": "Welcome to visit our studio, experience the charm of traditional embroidery crafts firsthand, communicate face-to-face with the master, and learn the stories behind each artwork.",
+    "bookNow": "Book Now",
+    "form": {
+      "name": "Name",
+      "nameRequired": "Name *",
+      "namePlaceholder": "Please enter your name",
+      "email": "Email",
+      "emailRequired": "Email *",
+      "emailPlaceholder": "Please enter your email",
+      "phone": "Phone Number",
+      "phonePlaceholder": "Please enter your phone number",
+      "subject": "Subject",
+      "subjectRequired": "Subject *", 
+      "subjectPlaceholder": "Please enter subject",
+      "message": "Message",
+      "messageRequired": "Message *",
+      "messagePlaceholder": "Please enter your message...",
+      "send": "Send Message",
+      "sending": "Sending...",
+      "sent": "Sent Successfully",
+      "success": "Message sent successfully! We will reply as soon as possible.",
+      "error": "Send failed, please try again later or contact us directly."
+    },
+    "defaults": {
+      "address": "No.88, Embroidery Art Street, Gusu District, Suzhou",
+      "hours": "Monday to Saturday 9:00-17:00",
+      "phone": "+86 138 0000 0000",
+      "email": "contact@hui-embroidery.com"
+    }
+  },
+  "master": {
+    "title": "Master's Profile",
+    "subtitle": "International Embroidery Master Mao Hui",
+    "description": "Hui Embroidery was founded by international embroidery master Mao Hui, focusing on the inheritance and innovation of Xiang embroidery art, providing unique haute couture embroidery services for high-end clients. Master Mao Hui comes from an embroidery family, studied under Asia-Pacific master and Chinese arts and crafts master Zhou Jinxiu, possesses over 30 years of exquisite skills, and is the third-generation inheritor of the unique Xiang embroidery technique \"fine hair stitch\".",
+    "description2": "Her works have won international awards repeatedly and are highly praised by collectors and art lovers worldwide. In embroidery themes such as figures, animals, flowers and birds, and landscapes, Master Mao Hui is good at bold innovation, developing new stitches based on traditional techniques to enhance the artistry and liveliness of her works.",
+    "achievements": "Major Achievements",
+    "technique": "Unique Technique", 
+    "techniqueDesc": "Third-generation inheritor of the fine hair stitch technique, able to delicately express animal fur and human hair in embroidery, making works more vivid and three-dimensional.",
+    "learnMore": "Learn More About Master"
+  },
+  "language": {
+    "chinese": "中文",
+    "english": "EN"
+  },
   "common": {
     "loading": "Loading...",
     "error": "An error occurred",
@@ -86,5 +164,11 @@
     "filter": "Filter",
     "sort": "Sort",
     "viewAll": "View All"
+  },
+  "footer": {
+    "description": "Inheriting thousand-year embroidery craftsmanship, interpreting Oriental artistic spirit with modern aesthetics, committed to helping more people understand and appreciate the beauty of Chinese traditional culture.",
+    "quickLinks": "Quick Links",
+    "contactInfo": "Contact Information",
+    "copyright": "© 2024 Hui Embroidery Artistry 慧繡雅集. All Rights Reserved."
   }
 }

@@ -10,36 +10,36 @@ import { useFeaturedArtworks } from '@/hooks/useArtworks';
 import { getImageUrl } from '@/lib/utils';
 import { AlertCircle } from 'lucide-react';
 
-// 備用作品資料（當 API 不可用時使用）
-const fallbackArtworks = [
-  {
-    id: 1,
-    title: "鳳凰呈祥",
-    description: "Phoenix Blessing",
-    image: "/images/artworks/embroidery-phoenix.jpg",
-    technique: "蘇繡 · 雙面繡",
-    size: "80cm × 60cm"
-  },
-  {
-    id: 2,
-    title: "牡丹富貴", 
-    description: "Peony Prosperity",
-    image: "/images/artworks/embroidery-peony.jpg",
-    technique: "湘繡 · 平針繡",
-    size: "60cm × 60cm"
-  },
-  {
-    id: 3,
-    title: "山水清音",
-    description: "Landscape Melody", 
-    image: "/images/artworks/embroidery-landscape.jpg",
-    technique: "蜀繡 · 暈針繡",
-    size: "120cm × 40cm"
-  }
-];
-
 const GallerySection = () => {
   const t = useTranslations();
+  
+  // 備用作品資料（當 API 不可用時使用）
+  const fallbackArtworks = [
+    {
+      id: 1,
+      title: t('gallery.fallback.phoenix'),
+      description: t('gallery.fallback.phoenixDesc'),
+      image: "/images/artworks/embroidery-phoenix.jpg",
+      technique: t('gallery.fallback.phoenixTechnique'),
+      size: "80cm × 60cm"
+    },
+    {
+      id: 2,
+      title: t('gallery.fallback.peony'), 
+      description: t('gallery.fallback.peonyDesc'),
+      image: "/images/artworks/embroidery-peony.jpg",
+      technique: t('gallery.fallback.peonyTechnique'),
+      size: "60cm × 60cm"
+    },
+    {
+      id: 3,
+      title: t('gallery.fallback.landscape'),
+      description: t('gallery.fallback.landscapeDesc'), 
+      image: "/images/artworks/embroidery-landscape.jpg",
+      technique: t('gallery.fallback.landscapeTechnique'),
+      size: "120cm × 40cm"
+    }
+  ];
   
   const { 
     data: apiArtworks, 
@@ -53,11 +53,11 @@ const GallerySection = () => {
   const artworks = apiArtworks && apiArtworks.length > 0 
     ? apiArtworks.map(artwork => ({
         id: artwork.id,
-        title: artwork.translations.title || `作品 ${artwork.id}`,
+        title: artwork.translations.title || `${t('gallery.fallback.artwork')} ${artwork.id}`,
         description: artwork.translations.description || '',
         image: getImageUrl(artwork.thumbnail_url || artwork.main_image_url),
         technique: artwork.translations.technique || artwork.medium,
-        size: artwork.dimensions || '未知尺寸'
+        size: artwork.dimensions || t('gallery.fallback.unknownSize')
       }))
     : fallbackArtworks;
 
@@ -112,7 +112,7 @@ const GallerySection = () => {
           <div className="flex items-center justify-center mb-8">
             <div className="bg-yellow-50 border border-yellow-200 rounded-lg p-4 flex items-center space-x-2 text-yellow-800">
               <AlertCircle size={16} />
-              <span className="text-sm">使用離線作品展示</span>
+              <span className="text-sm">{t('gallery.offline')}</span>
             </div>
           </div>
         )}

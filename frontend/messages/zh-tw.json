@@ -17,14 +17,59 @@
     "description": "「慧繡雅集」結合傳統湘繡與現代審美，打造高端訂製藝術品，傳承創新兼具，彰顯世界非文化遺產的珍貴價值。",
     "cta": "探索藝術之美"
   },
-  "master": {
-    "title": "大師風範",
-    "subtitle": "國際刺繡工藝大師 毛慧",
-    "description": "「慧繡雅集」由國際刺繡大師毛慧創立，專注於湘繡藝術的傳承與創新，為高端客戶提供獨一無二的高級訂製刺繡服務。毛慧老師來自湘繡世家，師承亞太大師、中國工藝美術大師周金秀，擁有超過30年的精湛技藝，是湘繡獨特針法「鬅毛針」的第三代傳承人。",
-    "description2": "她的作品屢獲國際獎項，深受全球收藏家和藝術愛好者的讚譽。在人物、動物、花鳥和山水等刺繡題材中，毛慧老師善於大膽創新，在傳統針法的基礎上，研發出新的針法，提升作品的藝術性和生動性。",
-    "achievements": "主要成就",
-    "technique": "獨特技法",
-    "techniqueDesc": "鬅毛針針法第三代傳承人，能夠細膩地表現出刺繡中動物的毛髮、人物的髮絲等，使作品更具生動與立體感。"
+  "awards": [
+    "1987年：《唐人打馬球》《編鐘樂舞》獲全國工藝美術百花獎金獎",
+    "1989年：多畫面全異繡《李清照》獲世博會金獎",
+    "1990年：《和服腰帶》獲輕工部百花獎金獎",
+    "2002年：設計繡製《布什全家福》作為禮品贈予布什總統夫婦",
+    "2014年：《橡樹林》獲中國國際文化產業博覽交易會百花獎金獎",
+    "2016年：參加台灣工藝發展協會聯展，作品獲特優金獎"
+  ],
+  "booking": {
+    "title": "預約參觀工作室",
+    "subtitle": "體驗傳統刺繡藝術的魅力，深入了解大師的創作過程與技法精髓",
+    "form": {
+      "bookingInfo": "預約資訊",
+      "serviceType": "服務類型",
+      "tour": "工作室參觀導覽（免費）",
+      "workshop": "刺繡體驗工作坊（NT$2,000/人）",
+      "private": "私人訂製諮詢（NT$500/小時）",
+      "group": "團體包場參觀（請洽詢）",
+      "name": "姓名",
+      "phone": "電話",
+      "email": "電子郵件",
+      "date": "預約日期",
+      "time": "預約時間",
+      "selectTime": "選擇時間",
+      "visitors": "參觀人數",
+      "people": "人",
+      "moreThan10": "10人以上",
+      "specialRequests": "特殊需求或備註",
+      "requestsPlaceholder": "請告訴我們您的特殊需求、興趣重點，或任何想了解的內容...",
+      "confirmBooking": "確認預約",
+      "rebook": "重新預約"
+    },
+    "info": {
+      "openingHours": "開放時間",
+      "tuesdayToSaturday": "週二至週六",
+      "sunday": "週日",
+      "monday": "週一",
+      "closed": "公休",
+      "location": "工作室地點",
+      "address": "台北市大安區復興南路一段123號3樓",
+      "transportation": "捷運忠孝復興站2號出口步行3分鐘",
+      "notes": "預約須知"
+    },
+    "rules": [
+      "請提前24小時預約",
+      "如需取消請提前4小時通知",
+      "工作坊需現場付費",
+      "歡迎攝影，請遵守工作室規範"
+    ],
+    "success": {
+      "title": "預約已成功送出！",
+      "message": "感謝您的預約，我們將在24小時內與您聯繫確認預約詳情。"
+    }
   },
   "gallery": {
     "title": "精品典藏",
@@ -38,11 +83,28 @@
     "technique": "技法",
     "medium": "媒材",
     "dimensions": "尺寸",
-    "year": "創作年份"
+    "year": "創作年份",
+    "fallback": {
+      "phoenix": "鳳凰呈祥",
+      "phoenixDesc": "Phoenix Blessing",
+      "phoenixTechnique": "蘇繡 · 雙面繡",
+      "peony": "牡丹富貴",
+      "peonyDesc": "Peony Prosperity", 
+      "peonyTechnique": "湘繡 · 平針繡",
+      "landscape": "山水清音",
+      "landscapeDesc": "Landscape Melody",
+      "landscapeTechnique": "蜀繡 · 暈針繡",
+      "artwork": "作品",
+      "unknownSize": "未知尺寸"
+    },
+    "offline": "使用離線作品展示"
   },
   "contact": {
     "title": "聯繫我們",
     "subtitle": "Contact Us",
+    "info": "聯絡資訊",
+    "sendMessage": "發送訊息",
+    "followUs": "追蹤我們",
     "email": "電子郵件",
     "phone": "聯繫電話",
     "address": "工作室地址",
@@ -52,30 +114,46 @@
     "bookNow": "立即預約",
     "form": {
       "name": "姓名",
+      "nameRequired": "姓名 *",
+      "namePlaceholder": "請輸入您的姓名",
       "email": "電子郵件",
+      "emailRequired": "電子郵件 *", 
+      "emailPlaceholder": "請輸入您的電子郵件",
       "phone": "電話號碼",
+      "phonePlaceholder": "請輸入您的電話號碼",
       "subject": "主旨",
+      "subjectRequired": "主旨 *",
+      "subjectPlaceholder": "請輸入主旨",
       "message": "訊息內容",
+      "messageRequired": "訊息內容 *",
+      "messagePlaceholder": "請輸入您的訊息內容...",
       "send": "發送訊息",
       "sending": "發送中...",
-      "success": "訊息已成功發送！",
-      "error": "發送失敗，請稍後再試。"
+      "sent": "已發送成功",
+      "success": "訊息發送成功！我們會盡快回覆您。",
+      "error": "發送失敗，請稍後再試或直接聯繫我們。"
+    },
+    "defaults": {
+      "address": "蘇州市姑蘇區 刺繡藝術街88號",
+      "hours": "週一至週六 9:00-17:00",
+      "phone": "+86 138 0000 0000",
+      "email": "contact@hui-embroidery.com"
     }
   },
-  "footer": {
-    "description": "傳承千年刺繡工藝，以現代美學詮釋東方藝術精神，致力於讓更多人認識和欣賞中華傳統文化之美。",
-    "quickLinks": "快速導覽",
-    "contactInfo": "聯繫資訊",
-    "copyright": "© 2024 慧繡雅集 Hui Embroidery Artistry. 版權所有 All Rights Reserved."
+  "master": {
+    "title": "大師風範",
+    "subtitle": "國際刺繡工藝大師 毛慧",
+    "description": "「慧繡雅集」由國際刺繡大師毛慧創立，專注於湘繡藝術的傳承與創新，為高端客戶提供獨一無二的高級訂製刺繡服務。毛慧老師來自湘繡世家，師承亞太大師、中國工藝美術大師周金秀，擁有超過30年的精湛技藝，是湘繡獨特針法「鬅毛針」的第三代傳承人。",
+    "description2": "她的作品屢獲國際獎項，深受全球收藏家和藝術愛好者的讚譽。在人物、動物、花鳥和山水等刺繡題材中，毛慧老師善於大膽創新，在傳統針法的基礎上，研發出新的針法，提升作品的藝術性和生動性。",
+    "achievements": "主要成就",
+    "technique": "獨特技法",
+    "techniqueDesc": "鬅毛針針法第三代傳承人，能夠細膩地表現出刺繡中動物的毛髮、人物的髮絲等，使作品更具生動與立體感。",
+    "learnMore": "了解更多大師故事"
   },
-  "awards": [
-    "1987年：《唐人打馬球》《編鐘樂舞》獲全國工藝美術百花獎金獎",
-    "1989年：多畫面全異繡《李清照》獲世博會金獎",
-    "1990年：《和服腰帶》獲輕工部百花獎金獎",
-    "2002年：設計繡製《布什全家福》作為禮品贈予布什總統夫婦",
-    "2014年：《橡樹林》獲中國國際文化產業博覽交易會百花獎金獎",
-    "2016年：參加台灣工藝發展協會聯展，作品獲特優金獎"
-  ],
+  "language": {
+    "chinese": "中文",
+    "english": "EN"
+  },
   "common": {
     "loading": "載入中...",
     "error": "發生錯誤",
@@ -86,5 +164,11 @@
     "filter": "篩選",
     "sort": "排序",
     "viewAll": "查看全部"
+  },
+  "footer": {
+    "description": "傳承千年刺繡工藝，以現代美學詮釋東方藝術精神，致力於讓更多人認識和欣賞中華傳統文化之美。",
+    "quickLinks": "快速導覽",
+    "contactInfo": "聯繫資訊",
+    "copyright": "© 2024 慧繡雅集 Hui Embroidery Artistry. 版權所有 All Rights Reserved."
   }
 }
